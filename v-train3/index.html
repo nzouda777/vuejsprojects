@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    body{
+      background: #eee;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+    p, h3,ul{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      list-style-type: none;
+      display: flex;
+      background: #fff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border-radius: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li.fav{
+      background: rgba(7, 250, 250, 0.185);
+    }
+
+    
+  </style>
+  <!--
+
+    # first vue APP
+
+     <style>
+    .box{
+      padding: 100px 0;
+      width: 400px;
+      text-align: center;
+      background: #ddd;
+      margin: 20px;
+      display: inline-block;
+    }
+  </style>
+
+    <h1>Hello this is a vue app</h1>
+
+    <div id="app">
+        <div class="" v-if="showBooks">
+          {{ author }} - {{ title }} - {{ age }}
+        </div>
+
+        <button @click="toggleShowBooks">
+          <span v-if="showBooks">hide books</span>
+          <span v-else>show books</span>
+        </button>
+
+        <div class="" v-show="showBooks"> display books</div>
+
+        <!-- Mouse Event -->
+
+        <!--
+           <div class="box" @mouseover="eventHandler($event, 5)"> mouse over (enter)</div>
+        <div class="box" @mouseleave="eventHandler">mouse leave</div>
+        <div class="box" @dblclick="eventHandler">double click</div>
+        <div class="box" @mousemove="handleMousemove">Mouse Position - ({{ x }} : {{ y }}) </div>
+    </div>
+        -->
+       
+
+ 
+        <!-- Second Vue app name:  #app1-->
+
+
+        <div id="app1">
+          <h1>Hello Vue</h1>
+          <!--
+            attribute binding
+          -->
+            <!--
+              <a :href="url" @click="loadLinks()" >facebook</a>
+            --> 
+
+            <div v-if="showBooks">
+                <ul>
+                  <li v-for="book in filteredBooks" @dblclick="toggleFav(book)" :class= "{ fav: book.isFav}" >
+                    <img :src="book.image" :alt="book.title">
+                      <h3>{{ book.title }}</h3>
+                      <p> {{ book.author }} <i> {{ book.age }} </i> </p>
+                  </li>
+                </ul>
+            </div>
+
+            <button @click="toggleShowBooks">
+              <span v-if="showBooks">hide books</span>
+              <span v-else>show books</span>
+            </button>
+    
+            <div class="" v-show="showBooks"> display books</div>
+
+            </div>
+        </div>
+ 
+
+<div class="test">
+  
+</div>
+
+   
+    <script src="./node_modules/vue/dist/vue.global.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

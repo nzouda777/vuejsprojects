@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #app3{
+            background: rgba(20, 4, 4, 0.979);
+            height: 100vh;
+            width: 100vw;
+        }
+        #app3 h1{
+            color: antiquewhite;
+        }
+    </style>
+    <!--
+    <div id="app1">
+        {{ counter }}
+        
+    </div>
+
+    <div id="app2">
+        <p> {{ message }}</p>
+        <button @click="reverseMessage">inverser le Message</button>
+    </div>
+    -->
+
+    <div id="app3">
+        <div class="header">
+            <h1> {{ element }} </h1>
+        </div>
+        
+    </div>
+    <script src="./node_modules/vue/dist/vue.global.js"></script>
+    <script src="./app/app.js"></script>
+</body>
+</html>
